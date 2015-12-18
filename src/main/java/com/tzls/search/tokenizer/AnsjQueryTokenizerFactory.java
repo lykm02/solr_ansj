@@ -4,7 +4,7 @@ import java.io.Reader;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.util.AttributeSource.AttributeFactory;
+import org.apache.lucene.util.AttributeFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +32,5 @@ public class AnsjQueryTokenizerFactory extends ReloadableTokenizerFactory {
 	public Tokenizer create(AttributeFactory factory, Reader input) {
 		return new AnsjQueryTokenizer(input, rmPunc);
 	}
-
-
 	
 }

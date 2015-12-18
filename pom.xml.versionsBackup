@@ -2,49 +2,30 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.lykm</groupId>
   <artifactId>solr_ansj</artifactId>
-  <version>1.0</version>
+  <version>0.0.1-SNAPSHOT</version>
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <elasticsearch.version>1.0.0</elasticsearch.version>
     </properties>
-	<!--
-		<repository>
-			<id>oschina</id>
-			<name>oschina</name>
-			<url>http://maven.oschina.net/content/groups/public/</url>
-		</repository>
-		-->
-		<!--
-    <repositories>
 
-		<repository>  
-			<id>ibiblio</id>  
-			<name>ibiblio Maven Repository</name>  
-			<url>http://www.ibiblio.org/maven2</url>  
-		</repository>
-		<repository>  
-				<id>mvnsearch</id>  
-				<name>mvnsearch Maven Repository</name>  
-				<url>http://www.mvnsearch.org/maven2</url>  
-		</repository> 
-		<repository>
-            <id>ANSJ-repo</id>
+    <repositories>
+        <repository>
+            <id>mvn-repo</id>
             <url>http://maven.ansj.org/</url>
         </repository>
-
     </repositories>
-	-->
     <dependencies>
     <dependency>
             <groupId>org.nlpcn</groupId>
             <artifactId>nlp-lang</artifactId>
-            <version>0.3</version>
+            <version>0.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.ansj</groupId>
             <artifactId>ansj_seg</artifactId>
             <classifier>min</classifier>
-            <version>2.0.8</version>
+            <version>2.0.7</version>
             <scope>compile</scope>
         </dependency>
 
@@ -72,7 +53,7 @@
         <dependency>
      		 <groupId>org.apache.lucene</groupId>
       		 <artifactId>lucene-analyzers-common</artifactId>
-      		 <version>4.10.4</version>
+      		 <version>4.5.0</version>
       		 <scope>compile</scope>
     		 </dependency>
         <dependency>
@@ -83,24 +64,20 @@
         <dependency>
         	<groupId>org.apache.solr</groupId>
         	<artifactId>solr-core</artifactId>
-        	<version>4.10.4</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.jetty</groupId>
-					<artifactId>jetty*</artifactId>
-				</exclusion>
-			</exclusions>
+        	<version>4.5.0</version>
         </dependency>
     </dependencies>
-    <build>
+     <build>
+
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
             
